@@ -1,5 +1,6 @@
 # JavaStudy
-자바 코드 모음
+
+java의 정석을 읽고 따라 구현한 코드들
 
 ![XL](https://user-images.githubusercontent.com/98295182/193035354-0709e2c3-5862-45b4-acde-f5626f2da4fa.jpg)
 
