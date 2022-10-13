@@ -5,19 +5,20 @@ public class ThreadEx12 {
         th1.start();
         th2.start();
 
-        try {
-            th1.sleep(2000);
-        } catch (InterruptedException e) {}
 
-        System.out.println("<<main 종료>>");
+        System.out.print("<<main 종료>>");
     }
 }
-
 class ThreadEx12_1 extends Thread {
     public void run() {
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
+
         for(int i=0; i < 300; i++)
-            System.out.println("-");
-        System.out.println("<<th1종료>>");
+            System.out.print("-");
+        System.out.print("<<th1종료>>");
 
     }
 }
@@ -25,7 +26,7 @@ class ThreadEx12_1 extends Thread {
 class ThreadEx12_2 extends Thread {
     public void run() {
         for(int i=0; i< 300; i++)
-            System.out.println("|");
-        System.out.println("<<th2종료>>");
+            System.out.print("|");
+        System.out.print("<<th2종료>>");
     }
 }
