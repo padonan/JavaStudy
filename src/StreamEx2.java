@@ -16,8 +16,8 @@ public class StreamEx2 {
         fileStream = Stream.of(fileArr);
 
         fileStream.map(File::getName)
-                .filter(s -> s.indexOf('.') != -1)
-                .map(s -> s.substring(s.indexOf('.')+1))
+                .filter(a -> a.indexOf('.') != -1)
+                .map(a -> a.substring(a.indexOf('.')+1))
                 .map(String::toUpperCase)
                 .distinct()
                 .forEach(System.out::print);

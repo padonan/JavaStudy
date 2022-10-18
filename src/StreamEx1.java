@@ -13,17 +13,18 @@ public class StreamEx1 {
                 new Student("김자바", 3, 180)
             );
         System.out.println(studentStream.getClass());
+
         studentStream.sorted(Comparator.comparing(Student::getBan)
                 .thenComparing(Comparator.naturalOrder()))
                 .forEach(System.out::println);
     }
 }
 
-class Student implements Comparable<Student> {
+class StudentEx2 implements Comparable<Student> {
     String name;
     int ban;
     int totalScore;
-    Student(String name, int ban, int totalScore) {
+    StudentEx2(String name, int ban, int totalScore) {
         this.name = name;
         this.ban = ban;
         this.totalScore = totalScore;
@@ -43,3 +44,19 @@ class Student implements Comparable<Student> {
         return s.totalScore - this.totalScore;
     }
 }
+
+//[김자바, 1, 200]
+//[소자바, 1, 200]
+//[박자바, 2, 150]
+//[안자바, 2, 100]
+//[이자바, 3, 300]
+//[나자바, 3, 290]
+//[김자바, 3, 180]
+
+//[김자바, 1, 200]
+//[소자바, 1, 200]
+//[안자바, 2, 100]
+//[박자바, 2, 150]
+//[김자바, 3, 180]
+//[나자바, 3, 290]
+//[이자바, 3, 300]
