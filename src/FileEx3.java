@@ -7,12 +7,13 @@ public class FileEx3 {
     static int totalDirs = 0;
 
     public static void main(String[] args) {
-        if(args.length != 1) {
+        String src = "src/FileEx3.java";
+        if(src.length() != 1) {
             System.out.println("USAGE : java FileEx3 DIRECTORY");
             System.exit(0);
         }
 
-        File dir = new File(args[0]);
+        File dir = new File("src/FileEx3.java");
 
         if(!dir.exists() || !dir.isDirectory()) {
             System.out.println("유효하지 않은 디렉토리입니다.");
@@ -50,8 +51,8 @@ public class FileEx3 {
             System.out.println(fileNum + "개의 파일," + dirNum + "개의 디렉토리");
             System.out.println();
 
-            for(int i=0; i < subDir.size() i++) {
-                int index = Integer.parseInt((String) subDir.get(i));
+            for(int j=0; j < subDir.size(); j++) {
+                int index = Integer.parseInt((String) subDir.get(j));
                 printFileList(files[index]);
             }
         }
